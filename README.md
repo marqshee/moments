@@ -1,2 +1,3 @@
 # newness-takehome-moments
-Take home assignment
+Take home assignment.
+Due: 8/17/2020
