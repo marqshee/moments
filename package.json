@@ -1,0 +1,25 @@
+{
+  "name": "newness-takehome-moments",
+  "version": "1.0.0",
+  "description": "Take home assignment. Due: 8/17/2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marqshee/newness-takehome-moments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marqshee/newness-takehome-moments/issues"
+  },
+  "homepage": "https://github.com/marqshee/newness-takehome-moments#readme",
+  "dependencies": {
+    "aws-sdk": "^2.734.0",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-cli": "^2.5.2",
+    "m3u8-parser": "^4.4.3"
+  }
+}
