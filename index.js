@@ -3,6 +3,7 @@ const AWS = require('aws-sdk');
 const s3 = new AWS.S3({region: 'us-west-1'});
 const m3u8Parser = require('m3u8-parser');
 const file = require('fs');
+const child = require('child_process');
 
 const event = {
   id: '081957680644',
@@ -28,7 +29,7 @@ const start = async (event) => {
     
     getMomentTsFilesFromS3(momentTimeRange, s3Bucket, s3KeyFullPrefix).then(() => {
         let command = "cat *.ts >stitch.txt";
-        require('child_process').execSync(command);
+        child.execSync(command);
         ffmpeg.runSync('-i stitch.txt -acodec copy -vcodec copy moment.mp4');
         
         const mp4 = file.readFileSync('moment.mp4');
@@ -45,7 +46,7 @@ const start = async (event) => {
           }
             console.log('done uploading');
         });
-        require('child_process').execSync('rm *.ts; rm stitch.txt; rm moment.mp4');
+        child.execSync('rm *.ts; rm stitch.txt; rm moment.mp4');
     });
 };
 start(event);
