@@ -44,3 +44,6 @@ The AWS API Gatway is the entry point to accessing the 'createMoment' Lambada fu
     "body": "Moment Created!"
 }
 ```
+
+### Addendum
+ * I looked up the command ffmpeg is currently using and am aware there are a few seconds of black screen time at the beginning of the moment. I believe it's an issue with the frame it's starting on and would possibly need to be re-encoded.
