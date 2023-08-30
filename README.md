@@ -1,4 +1,4 @@
-# newness-takehome-moments
+# moments
 Take home assignment. Due: 8/17/2020
 
 ### Moments
@@ -8,7 +8,7 @@ Livestreaming is a great way for creators to engage with their viewers, but the 
 The 'createMoment' API is an AWS service that will:
  *  processes m3u8 file based on quality
  *  creates a new mp4 file based on the start and end times using ffmpeg
- *  uploads the moment to a S3 bucket named newness-takehome-moments
+ *  uploads the moment to a S3 bucket named moments
 
 ### AWS Service Architecture
 The 'createMoment' APIs is built using AWS Lambda Integration which is a FAAS product. Lambda is an on demand service that allows for us to quickly prototype and or handle manipulation of data without having to worry about long term maintenance of a fleet service like EC2. In this case, 'createMoment' pulls from S3, parses a playlist for duration, pulls relevant files from S3 and uses FFMPEG to process the individual files into a MP4 which is then stored back into S3. There is no need to remember state for this particular API and because of this Lambda provides the perfect environment. Because they are stateless, AWS can execute the function easily on an open agent in the fleet. This allows the API to scale up with usage easily. 
