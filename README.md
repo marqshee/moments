@@ -1,5 +1,4 @@
 # moments
-Take home assignment. Due: 8/17/2020
 
 ### Moments
 Livestreaming is a great way for creators to engage with their viewers, but the long-form content is not always ideal for viewers to consume after the stream ends. Creators want to share the delightful moments that happen in a livestream with their fans. To aid them, we are building a new product called Moments as a novel and catchier way for creators to generate hype for their upcoming livestream by cross-promoting to their other social platforms. Each moment is a short segment of the live stream video, clipped by our creators and their moderator team.
