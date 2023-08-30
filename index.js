@@ -8,7 +8,7 @@ const s3 = new AWS.S3({ region: "us-west-1" });
  * AWS Lambda service:
  *  - processes m3u8 file based on quality
  *  - creates a new mp4 file based on the start and end times using ffmpeg
- *  - uploads the moment to a S3 bucket named newness-takehome-moments
+ *  - uploads the moment to a S3 bucket named moments
  * @param {object} event
  * @returns {object}
  */
@@ -18,7 +18,7 @@ exports.handler = async (event) => {
     const s3Bucket = event.s3_bucket;
     const s3KeyFullPrefix = `${event.s3_key_prefix}/hls/${event.resolution}`;
     const startTime = event.start_time;
-    const s3MomentBucket = "newness-takehome-moments";
+    const s3MomentBucket = "moments";
 
     // Retrieves HLS m3u8 playlist based on quality
     const params = {
